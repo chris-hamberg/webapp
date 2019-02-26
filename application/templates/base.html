@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="#" />
+    <!-- css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link type='text/css' rel='stylesheet' href='{{ url_for("static", filename="css/style.css") }}' />
+    <link type='text/css' rel='stylesheet' href='{{ url_for("static", filename="css/navbar.css") }}' />
+    <!-- jQuery -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <!-- JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>'Chris Hamberg'</title>
+</head>
+
+<body>
+
+    {% from "navbar.jinja" import NavBar with context %}
+    {% from "sidebar.jinja" import SideBar with context %}
+
+    <header>
+        <!-- Navbar -->
+        {{ NavBar() }}
+    </header>
+
+    <div class='row'>
+        <!-- Content -->
+        {% block container %} {% endblock %}
+        
+        <aside class='col-sm-3'>
+            <!-- SideBar -->
+            {{ SideBar() }}
+        </aside>    
+    </div>
+
+    <footer class='page-footer font-small'>    
+        <a href='https://github.com/morphine-html/webapp'>
+            github.com/morphine-html
+        </a>
+        <p>&copy; 2019 </p>
+    </footer>
+
+</body>
+
+<script>
+    // REF: https://stackoverflow.com/questions/42045814/changing-bootstrap-glyphicon-onclick-function?rq=1
+    $(document).ready(function(){
+    $('[data-toggle="collapse"]').click(function(){
+        $(this).find('span').toggleClass('glyphicon-minus-sign'
+        ).toggleClass('glyphicon-plus-sign');
+        });
+    });
+    
+    function source(img) {
+        $("#imageView").attr("src", img.src);
+        $("#modalCenter").modal("show");
+    }
+</script>
+
+</html>

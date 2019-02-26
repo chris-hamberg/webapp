@@ -1,0 +1,49 @@
+{% macro SideBar() -%}
+
+    <div class="accordion" id="accordionTree">
+    {% for category in content_tree.category %}
+    {% set name = category.name.split(' ')[0] %}
+    
+    <div class="card">
+    
+        <div class="card-header" id="{{ name }}">
+            <button class="btn btn-link collapsed" 
+                        type="button" data-toggle="collapse" 
+                        data-target="#collapse{{ name }}"
+                        aria-expanded="false" 
+                        aria-controls="collapse{{ name }}"
+                        id="side-menu-button">
+                <div>
+                    <span class="glyphicon glyphicon-minus-sign" id="glyph"></span>
+                    <h4 class="side-h4" id="side-menu-button">
+                        <b> {{ category.name }} </b>
+                    </h4>
+                </div>
+            </button>
+        </div>
+        
+        <div id="collapse{{ name }}" class="collapse" 
+                    aria-labelledby="{{ name }}"
+                    data-parent="#accordionTree">
+            <div class="card-body">
+            {% for subject in content_tree.subject %}
+            {% set val = subject.category.split(' ')[0] %}
+            {% if val == name %}
+                <ul id="side-menu">
+                     <li>
+                         <a id="side-menu" href="{{ subject.name }}">
+                             <b> {{ subject.name.title() }}</b>
+                         </a>
+                     </li>
+                </ul>
+            {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+
+    </div>
+    
+    {% endfor %}
+    </div>
+    
+{%- endmacro %}

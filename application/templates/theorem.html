@@ -1,0 +1,15 @@
+{% from "modal.jinja" import Modal with context %}
+{% from "carousel.jinja" import Carousel with context %}
+{% extends 'base.html' %}
+
+{% block container %}
+    <section class='col-sm-9' id='carousel-section'>
+
+        <!-- Bootstrap Carousel -->
+        {{ Carousel() }}
+
+        <!-- Modal -->
+        {{ Modal() }}
+
+    </section>
+{% endblock container %}

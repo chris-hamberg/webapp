@@ -1,0 +1,123 @@
+.form-control {
+background-color    :   black; 
+color               :   white;
+border              :   1px solid #555555;
+}
+
+.btn-default {
+background-color    :   lightgreen;
+border-color        :   black;
+transition          :   background-color 1s linear 0s;
+}
+
+.btn-default:hover {
+background-color    :   lime;
+}
+
+.navbar-inverse {
+background-image    :   linear-gradient(to right, #444444, black);
+}
+
+@media(max-width: 991px){
+    .navbar-inverse .navbar-form {
+    border-color    :   #101010;
+    }
+}
+
+@media(min-width: 991px){
+    .navbar-form {
+    float           :   right!important;
+    }
+}
+
+@media(max-width: 991px){
+    .navbar-form {
+    padding         :   10px 15px;
+    margin-top      :   8px;
+    margin-right    :   -15px;
+    margin-bottom   :   8px;
+    margin-left     :   -15px;
+    border-top      :   1px solid transparent;
+    border-bottom   :   1px solid transparent;
+    box-shadow      :   inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
+    }
+}
+
+@media(max-width: 991px){
+    .navbar-left {
+    float           :   none!important;
+    }
+}
+
+@media(max-width: 991px){
+    .navbar-form .form-group {
+    display         :   block;
+    margin-bottom   :   5px;
+    }
+}
+
+@media(max-width: 991px){
+    .navbar-form .form-control {
+    width           :   100%;
+    }
+}
+
+@media(max-width: 991px){
+    .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right    :   -15px;
+    margin-left     :   -15px;
+    }
+}
+
+@media(max-width: 991px){
+    .navbar-nav {
+    margin          :   inherit;
+    }
+}
+
+@media(max-width: 991px){
+    .nav {
+    padding-left    :   0;
+    }
+}
+
+/*
+REF
+https://stackoverflow.com/questions/19827605/change-bootstrap-navbar-collapse-breakpoint-without-using-less
+*/
+@media (max-width: 991px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+}

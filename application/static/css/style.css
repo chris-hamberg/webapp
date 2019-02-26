@@ -1,0 +1,177 @@
+body {
+max-width           :   100%;
+min-width           :   100%;
+overflow-x          :   hidden;
+background-color    :   #333333;
+}
+
+.btn {
+text-decoration     :   none !important;
+}
+
+#glyph {
+float               :   left;
+}
+
+aside {
+background-color    :   #333333;
+margin-right        :   1%;
+margin-left         :   1%;
+}
+
+@media (min-width: 991px){
+    .col-sm-3 {
+    width           :   23%;
+    padding-right   :   0px;
+    }
+}
+
+@media (max-width: 991px){
+    .col-sm-3 {
+    width           :   100%;
+    margin-top      :   -7%;
+    }
+}
+
+@media (max-width: 991px){
+    .col-sm-7 {
+    width          :    90%;
+    margin         :    0% 5% 9% 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-sm-7 {
+    margin          :   -1% 5% 12% 5%;
+    }
+}
+
+@media (max-width: 991px){
+    .col-sm-9 {
+    width           :   100%;
+    }
+}
+
+.accordion {
+text-align          :   center;
+}
+
+#side-menu {
+list-style          :   none;
+padding             :   1%;
+color               :   black;
+}
+
+#side-menu-button {
+color               :   mediumseagreen;
+width               :   100%;
+border-radius       :   10px;
+transition          :   background-color 1s linear 0s;
+}
+
+@media (min-width: 991px){
+    #side-menu-button {
+    border-radius   :   15px 0px 0px 15px;
+    text-align      :   left;
+    margin-right    :   -10%;
+    }
+}
+
+@media (min-width: 991px) {
+    .side-h4 {
+    margin-left     :   10%;
+    margin-right    :   -10%;
+    }
+}
+
+#side-menu-button:hover {
+background-color    :   black;
+}
+
+.card-header {
+border-radius       :   10px;
+margin              :   0px 0px 10px 0px;
+background-image    :   linear-gradient(to right, #040404, #224444);
+}
+
+@media (min-width: 991px) {
+    .card-header {
+    border-radius   :   15px 0px 0px 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .card-header {
+        margin      :   0px 2.7% 10px 0px;
+    }
+}
+
+.card-body {
+background-image    :   linear-gradient(to right, #8BB1B1, #269E8B);
+margin              :   -10px 4% 0px 1%;
+padding             :   10px;
+opacity             :   .6;
+}
+
+
+@media (min-width: 991px) {
+    .card-body {
+    margin          :   -10px -5% 0px 5%;
+    }
+}
+
+.row {
+min-height          :   750px;
+}
+
+#normal-section {
+min-height          :   350px;
+background-color    :   white;
+text-align          :   center;
+}
+
+.theorem, #imageView {
+width               :   100%;
+margin              :   0%;
+filter              :   invert(95%);
+}
+
+#imageView {
+filter              :   invert(100%);
+}
+
+.modal-content {
+width               :   174%;
+margin-left         :   -37%;
+background-color    :   black;
+opacity             :   0.6;
+}
+
+.modal-header {
+border-bottom       :   0px;
+opacity             :   1;
+} 
+
+.modal-open header {
+opacity             :   0.15;
+}
+
+.modal-open .navbar {
+opacity             :   0.15;
+}
+
+.modal-open #myCarousel {
+opacity             :   0.34;
+}
+
+.modal-open aside {
+opacity             :   0.34;
+}
+
+#myCarousel {
+margin-bottom       :   10%;
+}
+
+footer {
+text-align          :   center;
+}
