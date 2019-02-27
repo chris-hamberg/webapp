@@ -1,7 +1,7 @@
 {% macro SideBar() -%}
 
     <div class="accordion" id="accordionTree">
-    {% for category in content_tree.category %}
+    {% for category in cms.category %}
     {% set name = category.name.split(' ')[0] %}
     
     <div class="card">
@@ -26,12 +26,12 @@
                     aria-labelledby="{{ name }}"
                     data-parent="#accordionTree">
             <div class="card-body">
-            {% for subject in content_tree.subject %}
+            {% for subject in cms.subject %}
             {% set val = subject.category.split(' ')[0] %}
             {% if val == name %}
                 <ul id="side-menu">
                      <li>
-                         <a id="side-menu" href="{{ subject.name }}">
+                         <a id="side-menu" href="/{{ subject.name }}">
                              <b> {{ subject.name.title() }}</b>
                          </a>
                      </li>

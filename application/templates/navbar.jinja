@@ -14,17 +14,17 @@
             
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    {% for page in pages %}
-                        {% if page.active %}
+                    {% for button in navbar %}
+                        {% if button.active %}
                             <li class="active">
                         {% else %}
                             <li class="inactive">
                         {% endif %}
-                        <a href="{{ page.url }}">{{ page.name }}</a>
+                        <a href="/{{ button.url }}">{{ button.name }}</a>
                             </li>
                     {% endfor %}
                 </ul>
-                <form class="navbar-form navbar-left" method="post" action="/login">
+                <form class="navbar-form navbar-left" method="post" action="/login/">
                     <div class="form-group">
                         <input type="text" class="form-control" name="email" placeholder="Email">
                         <input type="text" class="form-control" name="passw" placeholder="Password">

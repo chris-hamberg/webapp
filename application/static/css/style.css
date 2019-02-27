@@ -107,7 +107,8 @@ background-image    :   linear-gradient(to right, #040404, #224444);
 }
 
 .card-body {
-background-image    :   linear-gradient(to right, #8BB1B1, #269E8B);
+background-image    :   linear-gradient(to right, #1CA1BF, #269E8B);
+/*background-image    :   linear-gradient(to right, #8BB1B1, #269E8B);*/
 margin              :   -10px 4% 0px 1%;
 padding             :   10px;
 opacity             :   .6;
@@ -125,8 +126,9 @@ min-height          :   750px;
 }
 
 #normal-section {
+background-image    :   linear-gradient(to right, #1CA1BF, #269E8B);
 min-height          :   350px;
-background-color    :   white;
+/*background-color    :   white;*/
 text-align          :   center;
 }
 
@@ -173,5 +175,6 @@ margin-bottom       :   10%;
 }
 
 footer {
+color               :   skyblue;
 text-align          :   center;
 }

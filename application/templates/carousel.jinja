@@ -1,10 +1,10 @@
 <!-- macro for the carousel -->
 {% macro make_slide(namedtuple) -%}
     {% if namedtuple.plot %}
-    {% set target = url_for("static", filename=namedtuple.plot) %}
+    {% set target = url_for("data", filename=namedtuple.plot) %}
     <img onclick="source(this)" class="theorem" id="theorem" src="{{ target }}">
     {% endif %}
-    {% set target = url_for("static", filename=namedtuple.theorem) %}
+    {% set target = url_for("data", filename=namedtuple.theorem) %}
     <img onclick="source(this)" class="theorem" id="theorem" src="{{ target }}">
 {%- endmacro %}
 
