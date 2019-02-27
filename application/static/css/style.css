@@ -178,3 +178,74 @@ footer {
 color               :   skyblue;
 text-align          :   center;
 }
+
+#reuters-app {
+background-image    :   linear-gradient(to right, #223344, #333333);
+color               :   #118888;
+width               :   73.5%;
+margin-top          :   -20px;
+margin-left         :   -7%;
+padding             :   2%;
+border              :   1px 1px none;
+border-color        :   #222222;
+border-style        :   none;
+}
+
+.reuters-header {
+color               :   #33AAAA;
+text-align          :   center;
+margin-bottom       :   7%;
+}
+
+.reuters-h1 {
+color               :   #00CCCC;
+font-size           :   3em;
+}
+
+.app-note {
+font-size           :   2em;
+color               :   #002233;
+text-shadow         :   1px 1px 1px black;
+}
+
+.reuters-h3 {
+color               :   #00CCCC;
+}
+
+.reuters-title {   
+font-size           :   2.3em;
+text-shadow         :   1px 1px 100px purple;
+}
+
+.reuters-title, #repo {
+color               :   #7755BB;
+text-shadow         :   1px 1px 100px purple;
+transition          :   color 1s linear 0s;
+}
+
+.reuters-title:hover, #repo:hover {
+color               :   magenta;
+}
+
+.reuters-link, #repo {
+text-decoration     :   none!important;
+}
+
+.reuters-date {
+font-size           :   1em;
+color               :   #002233;
+text-shadow         :   1px 1px 0px black;
+}
+
+.reuters-desc {
+font-size           :   1.5em;
+background          :   -webkit-linear-gradient(right, #00AA88, #1188AA);
+-webkit-background-clip:    text;
+-webkit-text-fill-color:    transparent;
+text-shadow         :   -10px -10px 150px darkblue;
+}
+
+.reuters-hr {
+border-color        :   #6622BB;
+box-shadow          :   1px 1px black;
+}
