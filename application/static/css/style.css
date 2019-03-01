@@ -1,251 +1,176 @@
+html {background-color: #333333;}
+
 body {
-max-width           :   100%;
-min-width           :   100%;
-overflow-x          :   hidden;
-background-color    :   #333333;
-}
+    background-image:   linear-gradient(to right, #223344, #333333);
+    color:              #118888;
+    text-align:         center;
+    min-height:         800px;
+    max-width:          100%;
+    min-width:          100%;
+    overflow-x:         hidden;}
 
-.btn {
-text-decoration     :   none !important;
-}
+a, .btn, .transparent-button {
+    color:              #7755BB;
+    text-shadow:        1px 1px 100px purple;
+    transition:         color 1s linear 0s;
+    text-decoration:    none!important;}
+a:hover {color: magenta;}
 
-#glyph {
-float               :   left;
-}
+.btn {color: black;}
 
-aside {
-background-color    :   #333333;
-margin-right        :   1%;
-margin-left         :   1%;
-}
+.transparent-button {
+    width:              100%;
+    height:             50px;
+    margin-top:         1.5%;
+    padding-right:      10%;
+    font-size:          1.1em;
+    color:              #11A099;
+    text-shadow:        0px 0px 100px #0099FF;
+    background-color:   transparent;
+    border:             none;
+    overflow:           visible;
+    outline:            none;}
+.transparent-button:hover {color: #50E9FF;}
 
-@media (min-width: 991px){
-    .col-sm-3 {
-    width           :   23%;
-    padding-right   :   0px;
-    }
-}
+section {
+    margin-top:         5.6%;
+    margin-left:        2%;
+    margin-right:       2%;
+    min-height:         350px;}
 
-@media (max-width: 991px){
-    .col-sm-3 {
-    width           :   100%;
-    margin-top      :   -7%;
-    }
-}
+.accordion {text-align: center;}
 
-@media (max-width: 991px){
-    .col-sm-7 {
-    width          :    90%;
-    margin         :    0% 5% 9% 5%;
-    }
-}
-
-@media (max-width: 768px) {
-    .col-sm-7 {
-    margin          :   -1% 5% 12% 5%;
-    }
-}
-
-@media (max-width: 991px){
-    .col-sm-9 {
-    width           :   100%;
-    }
-}
-
-.accordion {
-text-align          :   center;
-}
+#glyph {float: left;}
 
 #side-menu {
-list-style          :   none;
-padding             :   1%;
-color               :   black;
+    list-style:         none;
+    padding:            1%;
+    color:              black;}
+
+.card-header, #side-menu-button {
+    border-radius:      10px;
 }
 
 #side-menu-button {
-color               :   mediumseagreen;
-width               :   100%;
-border-radius       :   10px;
-transition          :   background-color 1s linear 0s;
-}
-
-@media (min-width: 991px){
-    #side-menu-button {
-    border-radius   :   15px 0px 0px 15px;
-    text-align      :   left;
-    margin-right    :   -10%;
-    }
-}
-
-@media (min-width: 991px) {
-    .side-h4 {
-    margin-left     :   10%;
-    margin-right    :   -10%;
-    }
-}
-
-#side-menu-button:hover {
-background-color    :   black;
-}
+    color:              mediumseagreen;
+    width:              100%;
+    transition:         background-color 1s linear 0s;
+    outline:            none;}
+#side-menu-button:hover {background-color: black;}
 
 .card-header {
-border-radius       :   10px;
-margin              :   0px 0px 10px 0px;
-background-image    :   linear-gradient(to right, #040404, #224444);
-}
-
-@media (min-width: 991px) {
-    .card-header {
-    border-radius   :   15px 0px 0px 15px;
-    }
-}
-
-@media (max-width: 991px) {
-    .card-header {
-        margin      :   0px 2.7% 10px 0px;
-    }
-}
+    margin:             0px 0px 10px 0px;
+    background-image:   linear-gradient(to right, #040404, #224444);
+    box-shadow:         3px 3px 3px black;}
 
 .card-body {
-background-image    :   linear-gradient(to right, #1CA1BF, #269E8B);
-/*background-image    :   linear-gradient(to right, #8BB1B1, #269E8B);*/
-margin              :   -10px 4% 0px 1%;
-padding             :   10px;
-opacity             :   .6;
-}
-
-
-@media (min-width: 991px) {
-    .card-body {
-    margin          :   -10px -5% 0px 5%;
-    }
-}
-
-.row {
-min-height          :   750px;
-}
-
-#normal-section {
-background-image    :   linear-gradient(to right, #1CA1BF, #269E8B);
-min-height          :   350px;
-/*background-color    :   white;*/
-text-align          :   center;
-}
+    background-image:   linear-gradient(to right, transparent, #1A1320);
+    margin:             -10px 4% 0px 1%;
+    padding:            10px;
+    opacity:            .9;}
 
 .theorem, #imageView {
-width               :   100%;
-margin              :   0%;
-filter              :   invert(95%);
-}
+    width:              100%;
+    margin:             0%;
+    filter:             invert(95%);}
 
-#imageView {
-filter              :   invert(100%);
-}
+#imageView {filter: invert(100%);}
 
 .modal-content {
-width               :   174%;
-margin-left         :   -37%;
-background-color    :   black;
-opacity             :   0.6;
-}
+    width:              174%;
+    margin-left:        -37%;
+    background-color:   black;
+    opacity:            0.6;}
 
 .modal-header {
-border-bottom       :   0px;
-opacity             :   1;
-} 
+    border-bottom:      0px;
+    opacity:            1;} 
 
-.modal-open header {
-opacity             :   0.15;
-}
+.modal-open header {opacity: 0.15;}
 
-.modal-open .navbar {
-opacity             :   0.15;
-}
+.modal-open .navbar {opacity: 0.15;}
 
-.modal-open #myCarousel {
-opacity             :   0.34;
-}
+.modal-open #myCarousel {opacity: 0.34;}
 
-.modal-open aside {
-opacity             :   0.34;
-}
+.modal-open aside {opacity: 0.34;}
 
-#myCarousel {
-margin-bottom       :   10%;
-}
+#myCarousel {margin-bottom: 10%;}
 
-footer {
-color               :   skyblue;
-text-align          :   center;
-}
+.reuters-header.affix, .reuters-header.affix-top {
+    top:                60px;
+    width:              74%;
+    margin:             0% 0% 0% 0%;
+    text-align:         center;
+    /*margin-bottom:      17%;*/
+    position:           fixed;}
 
-#reuters-app {
-background-image    :   linear-gradient(to right, #223344, #333333);
-color               :   #118888;
-width               :   73.5%;
-margin-top          :   -20px;
-margin-left         :   -7%;
-padding             :   2%;
-border              :   1px 1px none;
-border-color        :   #222222;
-border-style        :   none;
-}
+.reuters-h1, .reuters-h3 {color: #00CCCC;}
 
-.reuters-header {
-color               :   #33AAAA;
-text-align          :   center;
-margin-bottom       :   7%;
-}
+.reuters-h1 {font-size: 3em;}
 
-.reuters-h1 {
-color               :   #00CCCC;
-font-size           :   3em;
-}
+.app-note, .reuters-date{color: #002233;}
 
 .app-note {
-font-size           :   2em;
-color               :   #002233;
-text-shadow         :   1px 1px 1px black;
-}
+    font-size:          2em;
+    text-shadow:        1px 1px 1px black;}
 
-.reuters-h3 {
-color               :   #00CCCC;
-}
+.reuters-body {margin-top: 225px;}
+
+.reuters-article {opacity: 0;}
+
+.reuters-title, .reuters-date, .reuters-desc {text-align: left;}
 
 .reuters-title {   
-font-size           :   2.3em;
-text-shadow         :   1px 1px 100px purple;
-}
-
-.reuters-title, #repo {
-color               :   #7755BB;
-text-shadow         :   1px 1px 100px purple;
-transition          :   color 1s linear 0s;
-}
-
-.reuters-title:hover, #repo:hover {
-color               :   magenta;
-}
-
-.reuters-link, #repo {
-text-decoration     :   none!important;
-}
+    font-size:          2.3em;
+    text-shadow:        1px 1px 100px purple;}
 
 .reuters-date {
-font-size           :   1em;
-color               :   #002233;
-text-shadow         :   1px 1px 0px black;
-}
+    font-size:          1em;
+    text-shadow:        1px 1px 0px black;}
 
 .reuters-desc {
-font-size           :   1.5em;
-background          :   -webkit-linear-gradient(right, #00AA88, #1188AA);
--webkit-background-clip:    text;
--webkit-text-fill-color:    transparent;
-text-shadow         :   -10px -10px 150px darkblue;
-}
+    color:              #33AAAA;
+    font-size:          1.5em;
+    text-shadow:        -10px -10px 150px darkblue;
+    background:         -webkit-linear-gradient(right, #00AA88, #1188AA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
 
 .reuters-hr {
-border-color        :   #6622BB;
-box-shadow          :   1px 1px black;
+    border-color:       #6622BB;
+    box-shadow:         1px 1px black;}
+
+@media (max-width: 991px) {
+    
+    aside.affix-top, aside.affix {
+        margin-left:    1%;
+        width:          100%;
+        position:       static;}
+
+    .col-sm-9 {width: 100%;}
+
+    .card-header {margin: 0px 2.7% 10px 0px}
+
+}
+
+@media (min-width: 991px) {
+
+    aside.affix-top, aside.affix {
+        position:       fixed;
+        top:            14%;
+        left:           78%;}
+
+    #side-menu-button {
+        border-radius:  15px 0px 0px 15px;
+        text-align:     left;
+        margin-right:   -10%;}
+
+    .side-h4 {
+        margin-left:    10%;
+        margin-right:   -10%;}
+    
+    .card-header {border-radius: 15px 0px 0px 15px;}
+
+    /*    .card-body {margin: -10px -5% 0px 5%;}*/
+
 }

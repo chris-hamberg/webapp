@@ -5,17 +5,17 @@ border              :   1px solid #555555;
 }
 
 .btn-default {
-background-color    :   lightgreen;
+background-color    :   #00BB80;
 border-color        :   black;
 transition          :   background-color 1s linear 0s;
 }
 
 .btn-default:hover {
-background-color    :   lime;
+background-color    :   #00FFFF;
 }
 
 .navbar-inverse {
-background-image    :   linear-gradient(to right, #444444, black);
+background-image    :   linear-gradient(to right, #494654, #000008);
 }
 
 @media(max-width: 991px){

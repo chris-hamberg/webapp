@@ -30,11 +30,13 @@
             {% set val = subject.category.split(' ')[0] %}
             {% if val == name %}
                 <ul id="side-menu">
-                     <li>
+                    <li> 
                          <a id="side-menu" href="/{{ subject.name }}">
-                             <b> {{ subject.name.title() }}</b>
+                             <button class='category-button transparent-button'> 
+                                {{ subject.name.title() }}
+                             </button>
                          </a>
-                     </li>
+                    </li>
                 </ul>
             {% endif %}
             {% endfor %}

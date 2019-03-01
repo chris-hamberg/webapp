@@ -2,32 +2,28 @@
 
 {% block container %}
 
-    <div class='col-sm-1'></div> 
-
-    <section class='col-sm-7' id='reuters-app'>
-   
-        <div class='reuters-header'>
+        <div class='reuters-header affix affix-top'>
             <h1 class='reuters-h1'><b>Reuters World News RSS Streamer</b></h1>
             <p class='app-note'>(embedded application)</p>
             <h3 class='reuters-h3'><em>The repo for this application can be viewed at</em>
                 <a id="repo" href="https://github.com/chris-hamberg/reuters">github.com</a>
             </h3>
+            <hr class='reuters-hr'/> 
         </div>
-
-        <hr class='reuters-hr'/> 
-        {% for article in reuters.data %}
-            <a class='reuters-link' href="{{ article.link }}" target="_blank">
-                <p class='reuters-title'>{{ article.title }}</p></a>
-            <p class='reuters-date'><em>{{ article.date }}</em></p><br/>
-            {% set index = article.data.description.text.index('<') %}
-            <p class='reuters-desc'>
-                {{ article.data.description.text[:index] }}
-            </p><br/>
-            <hr class='reuters-hr'/>
-        {% endfor %}
-
-    </section>
-
-    <div class='col-sm-1'></div>
+        
+        <div class='reuters-body'>
+            {% for article in reuters.data %}
+            <div class='reuters-article'>
+                <a class='reuters-link' href="{{ article.link }}" target="_blank">
+                    <p class='reuters-title'>{{ article.title }}</p></a>
+                <p class='reuters-date'><em>{{ article.date }}</em></p><br/>
+                {% set index = article.data.description.text.index('<') %}
+                <p class='reuters-desc'>
+                    {{ article.data.description.text[:index] }}
+                </p><br/>
+                <hr class='reuters-hr'/>
+            </div>
+            {% endfor %}
+        </div>
 
 {% endblock container %}
