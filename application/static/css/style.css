@@ -4,14 +4,14 @@ body {
     background-image:   linear-gradient(to right, #223344, #333333);
     color:              #118888;
     text-align:         center;
-    min-height:         800px;
+    min-height:         100000px;
     max-width:          100%;
     min-width:          100%;
     overflow-x:         hidden;}
 
 a, .btn, .transparent-button {
     color:              #7755BB;
-    text-shadow:        1px 1px 100px purple;
+    /*text-shadow:        1px 1px 100px purple;*/
     transition:         color 1s linear 0s;
     text-decoration:    none!important;}
 a:hover {color: magenta;}
@@ -25,7 +25,7 @@ a:hover {color: magenta;}
     padding-right:      10%;
     font-size:          1.1em;
     color:              #11A099;
-    text-shadow:        0px 0px 100px #0099FF;
+    /*text-shadow:        0px 0px 100px #0099FF;*/
     background-color:   transparent;
     border:             none;
     overflow:           visible;
@@ -47,9 +47,7 @@ section {
     padding:            1%;
     color:              black;}
 
-.card-header, #side-menu-button {
-    border-radius:      10px;
-}
+.card-header, #side-menu-button {border-radius: 10px;}
 
 #side-menu-button {
     color:              mediumseagreen;
@@ -61,7 +59,7 @@ section {
 .card-header {
     margin:             0px 0px 10px 0px;
     background-image:   linear-gradient(to right, #040404, #224444);
-    box-shadow:         3px 3px 3px black;}
+    /*box-shadow:         3px 3px 3px black;*/}
 
 .card-body {
     background-image:   linear-gradient(to right, transparent, #1A1320);
@@ -97,12 +95,13 @@ section {
 #myCarousel {margin-bottom: 10%;}
 
 .reuters-header.affix, .reuters-header.affix-top {
+    background-image:   linear-gradient(to right, #223344, #333333);
     top:                60px;
     width:              74%;
     margin:             0% 0% 0% 0%;
     text-align:         center;
-    /*margin-bottom:      17%;*/
-    position:           fixed;}
+    position:           fixed;
+    z-index:            99999;}
 
 .reuters-h1, .reuters-h3 {color: #00CCCC;}
 
@@ -112,33 +111,48 @@ section {
 
 .app-note {
     font-size:          2em;
-    text-shadow:        1px 1px 1px black;}
+    /*text-shadow:        1px 1px 1px black;*/}
 
-.reuters-body {margin-top: 225px;}
+.reuters-body {margin-top: 225px; position: fixed;}
 
-.reuters-article {opacity: 0;}
+.reuters-article {
+    opacity: 0; 
+    width: 64%; 
+    position: fixed;
+    visibility: hidden;
+    transition: all 3s;
+    -webkit-transition: all 3s;
+    margin-left: 5%;
+    margin-top: -2%;
+}
+#first {opacity: 1; visibility: visible;}
 
 .reuters-title, .reuters-date, .reuters-desc {text-align: left;}
 
 .reuters-title {   
     font-size:          2.3em;
-    text-shadow:        1px 1px 100px purple;}
+    /*text-shadow:        1px 1px 100px purple;*/}
 
 .reuters-date {
     font-size:          1em;
-    text-shadow:        1px 1px 0px black;}
+    /*text-shadow:        1px 1px 0px black;*/}
 
 .reuters-desc {
     color:              #33AAAA;
     font-size:          1.5em;
-    text-shadow:        -10px -10px 150px darkblue;
+    /*text-shadow:        -10px -10px 150px darkblue;*/
     background:         -webkit-linear-gradient(right, #00AA88, #1188AA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;}
 
 .reuters-hr {
     border-color:       #6622BB;
-    box-shadow:         1px 1px black;}
+    /*box-shadow:         1px 1px black;*/}
+
+footer {
+    position: fixed;
+    width: 100%;
+    margin-top: 90px;}
 
 @media (max-width: 991px) {
     

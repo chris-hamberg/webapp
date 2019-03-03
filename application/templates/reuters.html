@@ -13,16 +13,21 @@
         
         <div class='reuters-body'>
             {% for article in reuters.data %}
-            <div class='reuters-article'>
-                <a class='reuters-link' href="{{ article.link }}" target="_blank">
-                    <p class='reuters-title'>{{ article.title }}</p></a>
-                <p class='reuters-date'><em>{{ article.date }}</em></p><br/>
-                {% set index = article.data.description.text.index('<') %}
-                <p class='reuters-desc'>
-                    {{ article.data.description.text[:index] }}
-                </p><br/>
-                <hr class='reuters-hr'/>
-            </div>
+                {% if article == reuters.data[0] %}
+                    <div class='reuters-article' id='first'>
+                {% else %}
+                    <div class='reuters-article'>
+                {% endif %}
+                        <a class='reuters-link' href="{{ article.link }}" target="_blank">
+                            <p class='reuters-title'>{{ article.title }}</p>
+                        </a>
+                        <p class='reuters-date'><em>{{ article.date }}</em></p><br/>
+                        {% set index = article.data.description.text.index('<') %}
+                        <p class='reuters-desc'>
+                            {{ article.data.description.text[:index] }}
+                        </p>
+                        <br/>
+                    </div>
             {% endfor %}
         </div>
 

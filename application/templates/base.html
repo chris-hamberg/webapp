@@ -57,26 +57,48 @@
         $("#imageView").attr("src", img.src);
         $("#modalCenter").modal("show");
     }
-    
-    $(window).on("load",function() {
-      $(window).scroll(function() {
 
-        var windowBottom = $(this).scrollTop() + $(this).innerHeight() + 165;
-        var windowTop    = $(this).scrollTop() + 300;
-    
-        $(".reuters-article").each(function() {
+    var article_array = document.getElementsByClassName("reuters-article");
+    var index = 0;
+    var position_past = 0;
+    var position_now = 0;
+    var pixel = 0;
+    var throttle = 45;
+    var ceiling = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
 
-          var objectBottom = $(this).offset().top + $(this).outerHeight();
-          var objectTop = $(this).offset().top;
-      
-          if ((objectBottom < windowBottom) && (objectTop >= windowTop)) {
-            if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
-          } else if ((objectBottom >= windowBottom) || (objectTop < windowTop)) {
-            if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
-          }
-        });
-      }).scroll(); //invoke scroll-handler on page-load
-    });
+    window.onscroll = function(e) {
+
+        // find out where we are
+        position_now = (document.body.getBoundingClientRect()).top
+        if (position_now == ceiling) {
+        // we're at the top, enforce the border values
+            pixel = 0;
+            index = 0;
+        } else if (position_now > position_past) {
+        // user scrolled UP
+            pixel--;
+            if ((!(pixel % throttle)) && (index != 0)) {index--;}
+        } else if (index < article_array.length) {
+        // user scrolled DOWN
+            pixel++;
+            if (!(pixel % throttle)) {index++;}
+        }
+        // remember where we scrolled to
+        position_past = (document.body.getBoundingClientRect()).top;
+
+        for (i=0; i < article_array.length; i++) {
+            if (i != index) {
+                if (index != article_array.length) {
+                // dont let the last article be hidden
+                    article_array[i].style.opacity = 0;
+                    article_array[i].style.visibility = "hidden";
+                }
+            } else {
+                article_array[i].style.visibility = "visible";
+                article_array[i].style.opacity = 1;
+            }
+        }
+    }
 
     // REF: https://stackoverflow.com/questions/42045814/changing-bootstrap-glyphicon-onclick-function?rq=1
     $(document).ready(function(){
